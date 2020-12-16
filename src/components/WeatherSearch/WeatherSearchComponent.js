@@ -1,23 +1,29 @@
 import React from 'react'
+import PropTypes from "prop-types";
 
-function WeatherSearchComponent(props) {
-    const { getWeather } = props;
+import s from './WeatherSearchComponent.module.css';
+
+const WeatherSearchComponent = props => {
+    const { getWeather, } = props;
 
     return (
-        <div className="main-container">
-            <div className="search-box">
-                <form onSubmit={getWeather}>
-                    <input
-                        name="location"
-                        type="text"
-                        className="search-bar"
-                        placeholder="Type your City"
-                    />
-                    <button className="seacrh-box">Search</button>
-                </form>
-            </div>
+        <div className={s.searchBox}>
+            <form onSubmit={getWeather}>
+                <input
+                    name="location"
+                    type="text"
+                    className={s.searchBar}
+                    placeholder="Type your City"
+                />
+            </form>
         </div>
     )
 };
 
+
+WeatherSearchComponent.propTypes = {
+    getWeather: PropTypes.func.isRequired,
+};
+
 export default WeatherSearchComponent;
+

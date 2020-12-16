@@ -1,0 +1,40 @@
+.searchBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px 15px;
+}
+  
+.searchBar{
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 15px;
+  
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 16px 16px 16px 16px;
+  
+    box-shadow: 5px 10px 5px 0px rgba(15, 15, 15, 0.404);
+  
+    color: #313131;
+    font-size: 20px;
+    font-weight: 300;
+    transition: 0.4s ease-out;
+  }
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.searchBar:focus {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.searchBar:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+}
